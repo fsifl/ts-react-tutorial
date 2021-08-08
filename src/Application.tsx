@@ -1,8 +1,10 @@
 // import * as PropTypes from "prop-types";
 
+type NameTagProps = {
+  name:string
+}
 
-
-const NameTag = () => {
+const NameTag = (props: NameTagProps) => {
   return (
     <main>
       <header>
@@ -10,7 +12,7 @@ const NameTag = () => {
         <p>My Name Is</p>
       </header>
       <section className="display-name">
-        <p>[Pls input your name]</p>
+        <p>{props.name}</p>
       </section>
       <footer />
     </main>
@@ -21,6 +23,6 @@ const NameTag = () => {
 //   name: PropTypes.string
 // }
 
-const Application = () => <NameTag />;
+const Application = () => <NameTag name="Thomas" />;
 
 export default Application;
